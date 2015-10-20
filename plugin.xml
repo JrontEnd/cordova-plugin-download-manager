@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-plugin-downloadManager"
+  version="0.0.1">
+  
+  <name>cordova-plugin-downloadManager</name>
+  <description>Download manager for cordova</description>
+  <license>MIT</license>
+  <author>Xingyu Jiao</author>
+  <keywords>cordova, downloadManager, chinese</keywords>
+
+  <repo>https://github.com/JrontEnd/cordova-plugin-downloadManager.git</repo>
+  <issue>https://github.com/JrontEnd/cordova-plugin-downloadManager/issues</issue>
+  
+  <engines>
+    <engine name="cordova" version=">3.0.0" />
+  </engines>
+  
+  <!-- android -->
+  
+</plugin>
