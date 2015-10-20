@@ -17,6 +17,10 @@
     <engine name="cordova" version=">3.0.0" />
   </engines>
   
+   <js-module src="www/DownloadManager.js" name="DownloadManager">
+        <clobbers target="windows.downloadmanager" />
+    </js-module>
+  
   <!-- android -->
   
 </plugin>
