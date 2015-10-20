@@ -24,23 +24,22 @@
    	under the License. 
 */
 
-cordova.define("cordova/plugin/DownloadManager/DownloadManager", function (require, exports, module) {
-	var exec = require("cordova/exec");
- 	module.exports = {
-  		start: function (message, win, fail) {
-   			exec(win, fail, "DownloadManager", "start", [message]);
-  		},
-  		cancel: function (message, win, fail) {
-  			exec(win, fail, "DownloadManager", "cancel", [message]);
-  		},
-  		isdownloading: function (message, win ,fail) {
-  			exec(win, fail, "DownloadManager", "isdownloading", [message]);
-  		}
- 	};
-});
+
+var exec = require("cordova/exec");
+var funcs = {
+  	start: function (message, win, fail) {
+   		exec(win, fail, "DownloadManager", "start", [message]);
+  	},
+  	cancel: function (message, win, fail) {
+  		exec(win, fail, "DownloadManager", "cancel", [message]);
+  	},
+  	isdownloading: function (message, win ,fail) {
+  		exec(win, fail, "DownloadManager", "isdownloading", [message]);
+  	}
+ };
 
 var dm = function (action, options, win, fail) {
-	var downloader = cordova.require("cordova/plugin/DownloadManager/DownloadManager");
+	var downloader = funcs;
 	o = {
 		id: options.id || "",
 		url: options.url || "",
@@ -68,4 +67,4 @@ var dm = function (action, options, win, fail) {
 		alert("[ERROR] DownloadManager (JavaScript): Action not supported");
 	}
 }
-window.downloadmanager = dm;
+module.exports = dm;
