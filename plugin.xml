@@ -22,5 +22,12 @@
     </js-module>
   
   <!-- android -->
-  
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="DownloadManager" >
+            <param name="android-package" value="org.apache.cordova.plugins.DownloadManager.DownloadManager"/>
+        </feature>
+    </config-file>
+  </platform>
+    
 </plugin>
