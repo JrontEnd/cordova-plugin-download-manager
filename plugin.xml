@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <plugin xmlns:android="http://schemas.android.com/apk/res/android"
-  id="cordova-plugin-downloadManager"
+  id="cordova-plugin-download-manager"
   version="0.0.1">
   
-  <name>cordova-plugin-downloadManager</name>
+  <name>cordova-plugin-download-manager</name>
   <description>Download manager for cordova</description>
   <license>MIT</license>
   <author>Xingyu Jiao</author>
-  <keywords>cordova, downloadManager, chinese</keywords>
+  <keywords>cordova, download,manager, chinese</keywords>
 
-  <repo>https://github.com/JrontEnd/cordova-plugin-downloadManager.git</repo>
-  <issue>https://github.com/JrontEnd/cordova-plugin-downloadManager/issues</issue>
+  <repo>https://github.com/JrontEnd/cordova-plugin-download-manager.git</repo>
+  <issue>https://github.com/JrontEnd/cordova-plugin-download-manager/issues</issue>
   
   <engines>
     <engine name="cordova" version=">3.0.0" />
   </engines>
   
    <js-module src="www/DownloadManager.js" name="DownloadManager">
-        <clobbers target="windows.downloadmanager" />
+        <clobbers target="window.downloadmanager" />
     </js-module>
   
   <!-- android -->
@@ -28,6 +28,9 @@
             <param name="android-package" value="org.apache.cordova.plugins.DownloadManager.DownloadManager"/>
         </feature>
     </config-file>
+
+    <!-- copy jar files -->
+    <source-file src="libs/android-support-v4.jar" target-dir="libs"/>
 
     <!-- copy java files -->
     <source-file src="src/android/DownloadControllerSingleton.java" target-dir="src/org/apache/cordova/plugins/DownloadManager" />

@@ -40,9 +40,9 @@ import java.util.Random;
 
 
 import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.api.CallbackContext;
-import org.apache.cordova.api.PluginResult;
-import org.apache.cordova.api.CordovaInterface;
+import org.apache.cordova.CallbackContext;
+import org.apache.cordova.PluginResult;
+import org.apache.cordova.CordovaInterface;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -55,7 +55,7 @@ import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.aabilio.pydowntv2.R;
+// import com.aabilio.pydowntv2.R;
 
 public class Downloader {
 	String id;
@@ -149,7 +149,7 @@ public class Downloader {
 					
 					mNotifyManager = (NotificationManager) cordova.getActivity().getSystemService(Activity.NOTIFICATION_SERVICE);
 					mBuilder = new NotificationCompat.Builder(cordova.getActivity())
-						.setSmallIcon(R.drawable.ic_stat_notification)
+						.setSmallIcon(android.R.drawable.stat_sys_download)
 						.setContentTitle(notificationTitle)
 						/*.setSubText("Tap to CANCEL")*/
 						.setTicker(ticker)
@@ -234,17 +234,17 @@ public class Downloader {
 					
 					
 					if(!file.exists()) {
-						showToast("Download went wrong, please try again or contact the developer.","long");
+						// showToast("Download went wrong, please try again or contact the developer.","long");
 						Log.e("PhoneGapLog", "Downloader Plugin: Error: Download went wrong.");
 					}
 					//callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.OK));
 				} catch (FileNotFoundException e) {
-					showToast("File does not exists or cannot connect to webserver, please try again or contact the developer.","long");
+					// showToast("File does not exists or cannot connect to webserver, please try again or contact the developer.","long");
 					Log.e("PhoneGapLog", "Downloader Plugin: Error: " + PluginResult.Status.ERROR);
 					e.printStackTrace();
 					callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR));
 				} catch (IOException e) {
-					showToast("Error downloading file, please try again or contact the developer.","long");
+					// showToast("Error downloading file, please try again or contact the developer.","long");
 					Log.e("PhoneGapLog", "Downloader Plugin: Error: " + PluginResult.Status.ERROR);
 					e.printStackTrace();
 					callbackContext.sendPluginResult(new PluginResult(PluginResult.Status.ERROR));
