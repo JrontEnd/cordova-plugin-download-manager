@@ -1,3 +1,23 @@
+# cordova-plugin-download-manager
+
+### 插件说明
+
+这是一个download-manager插件，修改自https://github.com/aabilio/phonegap-plugins
+
+1.支持cordova命令安装
+
+2.将相关提示修改成中文
+
+### 安装说明
+
+```
+cordova plugin add https://github.com/JrontEnd/cordova-plugin-download-manager.git
+```
+
+### 以下是原文档说明
+
+---
+
 # DownloaderManager plugin for Phonegap (Cordova) #
 
 The plugin can start and stop a file download from the web (HTTP).
